@@ -1,0 +1,607 @@
+.hidden
+  display: none
+
+.sm-hidden
+  display: none
+
+body
+  margin: 0 auto
+
+*
+  box-sizing: border-box
+  margin: 0
+
+  nav
+    padding: 30px
+    position: fixed
+    z-index: 1000
+    background-color: rgba(0,0,0,0.5)
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 1s all
+
+    &:hover 
+      background-color: rgba(0,0,0,0.7)
+
+    .nav-container
+      .flex 
+        display: flex
+        justify-content: space-between
+        width: 90%
+        margin: 0 auto
+    
+      .logo
+        margin-top: 20px
+
+        a 
+          text-decoration: none
+
+        h3
+          font-family: 'Lobster Two'
+          color: white
+          font-size: 28px
+
+      ul
+        display: flex
+        justify-content: center
+        align-items: center
+
+        li
+          display: flex
+          // align-items: center
+          // justify-content: center
+
+          &:not(:first-child)
+            margin-left: 0px
+
+          a
+            display: inline-block
+            outline: none
+            color: white
+            font-size: 20px
+            text-decoration: none
+            letter-spacing: 0.04em
+            font-family: Roboto
+            transition: 1s all
+
+            &:hover
+              color: #b7d5e7
+              text-decoration: none
+
+
+  .hero 
+    height: 80vh
+
+    .hero-1
+      background-repeat: no-repeat
+      background-attachment: fixed
+      background-size: cover      
+      padding-top: 84px
+      display: flex
+      max-width: 100vw
+      height: 80vh
+      background-image: url(images/dubrovnik-2.jpg)
+      background-position: left 
+
+    // &.hero-2
+    //   background-image: url(images/brod.jpg)
+    //   background-position: center 
+
+    // &.hero-3
+    //   background-image: url(images/priroda.jpg)
+    //   background-position: center 
+
+    .hero-text
+      h1
+        font-family: 'Signika', sans-serif
+        font-size: 60px
+        color: white 
+        flex-wrap: wrap
+        justify-content: center
+        padding: 0 50px
+    
+    .red 
+      color: #ee7575
+
+  .separator
+    height: 350px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 80%
+    margin: 0 auto
+    line-height: 1.2
+
+    p 
+      font-size: 26px
+    
+    .red 
+      color: #ff3b3b
+
+  .offers
+    display: flex
+    flex-direction: column
+
+    .offer
+      display: flex
+      flex-direction: column
+
+      &.second-offer
+        .description
+          order: 2
+
+      div
+        width: 100%    
+        
+        figure
+          height: 300px
+          background-position: center
+          background-repeat: no-repeat
+          background-size: cover
+          width: 100%
+          display: flex
+        
+        img
+          width: 100%      
+                            
+        .dubrovnik-offer-img
+          background-image: url(images/dubrovnik-srd.jpg)
+
+        .elaphite-offer-img
+          background-image: url(images/lopud2.jpg)
+
+        .ston-offer-img
+          background-image: url(images/brod.jpg)
+
+      .description
+        background-color: #f8fbfc
+
+        &:hover, &:active
+          span:before
+            padding-right: 140px
+            color: #1e70a3
+            background-color: #1e70a3
+        
+
+        div
+          width: 80%
+          line-height: 1.2
+          margin: 50px auto
+
+          h2 
+            font-family: 'Oswald', sans-serif
+            // font-family: 'Bebas Neue', cursive
+            text-transform: uppercase
+            font-size: 35px
+            color: #5f5f5f
+          
+          h4 
+            color: #838688
+            padding-top: 10px
+
+          p:first-of-type
+            padding-top: 30px
+
+          p 
+            padding-top: 10px
+            color: #515253
+            font-size: 19px
+            font-family: Roboto
+
+            a 
+              color: #1e70a3
+              text-decoration: none
+
+          span::before
+            content: "slano"
+            margin-bottom: 100px
+            padding-right: 40px
+            font-size: 2.5px
+            color: rgb(104,104,106)
+            background-color: rgb(104,104,106)
+            transition: 2s all
+
+          .button 
+            margin-top: 10px
+            position: relative
+            padding-bottom: 20px
+
+            button 
+              position: absolute
+              right: -25px
+              top: 0px
+              color: #1e70a3
+              border: 2px solid #1e70a3
+              border-radius: 25px
+              font-size: 20px
+              padding: 10px 15px
+              font-family: Roboto
+              background-color: #f8fbfc
+              transition: 0.5s all
+
+              &:hover
+                background-color: #1e70a3
+                color: white
+                cursor: pointer
+
+
+  .reviews
+    margin: 70px auto
+    width: 90%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    h1 
+      padding-bottom: 10px
+      text-transform: uppercase
+      font-family: Signika
+      font-weight: 700     
+      font-size: 35px
+      color: #313131
+          
+    p 
+      font-family: 'Roboto', sans-serif
+            
+    .item
+      margin: 30px 15px
+      background-color: #f8fbfc
+      padding: 15px 40px 20px
+      border: 1px solid #f2f4f5
+      border-radius: 20px 
+      -webkit-box-shadow: 0px 0px 24px -6px rgba(0,0,0,0.73)
+      -moz-box-shadow: 0px 0px 24px -6px rgba(0,0,0,0.73)
+      box-shadow: 0 0 20px rgba(0,0,0,.1)
+      transition: 1s all
+
+      &:hover
+        box-shadow: 0 0 22px rgba(0,0,0,.3)
+
+      .rating
+        display: flex 
+        justify-content: center
+        align-items: center
+        padding-bottom: 10px
+
+        span 
+          color: gold
+          font-size: 25px
+          opacity: .90     
+
+      .writer
+        display: flex
+        padding-top: 15px
+        justify-content: flex-end
+
+        .name
+          font-family: Lobster
+          text-align: right
+          display: block
+          position: relative
+        
+    .active::first-child()
+        opacity: 0.5 !important  
+
+  footer
+    background-color: #1e70a3
+    width: 100%
+
+    .footer-content
+      width: 80%
+      margin: 0 auto
+      padding: 50px 0px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+  
+      h3 
+        color: white
+        font-family: Poppins
+        font-size: 24px
+        padding-bottom: 15px
+
+    .contact
+      h4 
+        color: white
+        padding-bottom: 5px
+        font-size: 19px
+        margin-top: 10px
+
+        .fa-mail-bulk
+          font-size: 26px
+      
+      .fa-whatsapp
+        font-size: 25px
+      
+      .fa-viber
+        font-size: 23px
+
+    .second-nav
+      margin-top: 30px
+
+      ul
+        padding-left: 0     
+
+        li 
+          list-style-type: none
+        
+          a 
+            color: white
+            text-decoration: none
+            font-size: 19px
+            line-height: 1.3
+            transition: 0.5s all
+
+            &:hover
+              color: #bababa
+
+    .social-media
+      margin-top: 30px
+
+      .fa-facebook, .fa-instagram
+        color: white
+        font-size: 35px
+        transition: 0.4s all
+        border: 1px solid #1e70a3  
+        border-radius: 30px
+
+        &:hover
+          color: #1e70a3
+          background-color: white
+          cursor: pointer  
+
+      .fa-instagram
+        margin-left: 10px
+
+@media screen and ( min-width: 1024px)  
+  body
+    font-weight: 400
+    margin: 0 auto
+
+  *
+    box-sizing: border-box
+    margin: 0
+
+  .hero
+    width: 100%
+    height: 100vh
+
+    .hero-text
+      height: 100vh 
+      
+      h1
+        font-size: 80px
+        margin-left: 40px
+        margin-top: 70px
+
+  .separator
+    height: 280px
+    width: 65%
+    line-height: 1.4
+
+    &:hover
+      .red 
+        color: #000000
+        
+    .red 
+      transition: 1s all
+
+      
+  .offers 
+    .offer
+      flex-direction: row
+
+      &.second-offer
+        .description
+          order: 0
+
+        .offer-order
+          order: 2
+
+      div        
+        figure
+          height: 550px
+        
+      .description
+        div
+          margin-top: 70px
+          margin-left: 100px
+          width: 70%
+
+          .button 
+            padding-bottom: 0px
+
+            button
+              top: 20px
+              right: -90px
+
+  .reviews
+    margin: 80px auto
+    width: 75%
+
+    h1 
+      padding-bottom: 40px
+
+    // .active:first-of-type
+    //   opacity: 0.5 !important  
+
+  footer
+    .footer-content
+      width: 70%
+      flex-direction: row
+
+  
+    h3 
+      color: white
+      font-family: Poppins
+      font-size: 22px
+      padding-bottom: 15px
+
+    .second-nav
+      margin-top: 0      
+
+    .social-media
+      margin-top: 0
+
+
+@media screen and ( min-width: 1300px)
+  .reviews
+    width: 65%
+
+  .hero
+    width: 100%
+    height: 100vh
+
+    .hero-text
+      h1
+        font-size: 80px
+        margin-left: 100px
+        margin-top: 100px
+
+  .separator
+    height: 280px
+    width: 65%
+    line-height: 1.8
+
+  footer 
+    .footer-content
+      width: 50%
+
+#nav:checked
+  + .nav-open
+    transform: rotate(45deg)
+
+    i
+      background: #fff
+      transition: transform 0.2s ease
+
+      &:nth-child(1)
+        transform: translateY(6px) rotate(180deg)
+
+      &:nth-child(2)
+        opacity: 0
+
+      &:nth-child(3)
+        transform: translateY(-6px) rotate(90deg)
+
+  ~ .nav-container
+    z-index: 9990
+    width: 100vw
+    display: flex
+
+    ul li a
+      transform: translateY(0)
+      opacity: 1
+      transition: 1s all
+
+
+@media screen and (min-width: 1000px)
+  nav 
+    .nav-container
+      display: block
+      width: 100%
+
+      .flex
+        width: 100%
+        align-items: center
+
+        .logo 
+          margin-top: 0px
+
+        ul 
+          li 
+            padding-left: 20px
+
+
+
+@media screen and (max-width: 1000px)
+  nav
+    padding: 30px
+
+  .nav-container
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: -1
+    background: #1f2227
+    transition: all 0.2s ease
+
+    ul
+      position: absolute
+      flex-direction: column
+      top: 50%
+      transform: translateY(-50%)
+      width: 100%
+      left: -20px
+
+      li
+        display: block
+        float: none
+        width: 100%
+        margin-bottom: 10px
+
+        &:nth-child(1) a
+          transition-delay: 0.2s
+
+        &:nth-child(2) a
+          transition-delay: 0.3s
+
+        &:nth-child(3) a
+          transition-delay: 0.4s
+
+        &:nth-child(4) a
+          transition-delay: 0.5s
+
+        &:not(:first-child)
+          margin-left: 0
+
+        a
+          padding: 10px 25px
+          opacity: 0
+          color: #fff
+          font-size: 24px
+          font-weight: 600
+          transform: translateY(-20px)
+          transition: all 0.2s ease
+
+
+  .nav-open
+    position: fixed
+    right: 10px
+    top: 10px
+    display: block
+    width: 48px
+    height: 48px
+    cursor: pointer
+    z-index: 9999
+    border-radius: 50%
+    transition: 0.5s all
+
+    i
+      display: block
+      width: 20px
+      height: 2px
+      background: white
+      border-radius: 2px
+      margin-left: 14px
+
+      &:nth-child(1)
+        margin-top: 16px
+
+      &:nth-child(2)
+        margin-top: 4px
+        opacity: 1
+
+      &:nth-child(3)
+        margin-top: 4px
+
+    
+
+
