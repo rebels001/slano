@@ -1,5 +1,16 @@
 import React from 'react'
-import Review from "./Review"
+import OwlCarousel from "react-owl-carousel"
+
+import "owl.carousel/dist/assets/owl.carousel.min.css"
+import "owl.carousel/dist/assets/owl.theme.default.min.css"
+import AOS from 'aos';
+AOS.init({
+	useClassNames: true,
+	initClassName: false,
+	animatedClassName: 'animated',
+	easing: 'ease-in-out-cubic',
+	duration: 1600
+});
 
 const reviews = [
     {
@@ -20,12 +31,41 @@ const reviews = [
     }
 ]
 
+const responsive = {
+    0:{
+        items:1
+    },
+    800:{
+        items:2
+    },
+    1000:{
+        items:3
+    }
+}
+
+
 const Reviews = () => {
+    const renderedReviews = reviews.map((review, index) => {
+        return (
+            <div className="item">
+                <div className="rating">
+                    <span>★★★★★</span>
+                </div>
+                <p>{review.text}</p>
+                <div className="writer">
+                    <span className="name">- {review.author}</span>
+                </div>
+            </div>           
+        )
+    })
+
     return (
         <div>
-            <div class="reviews">
-                <h1>Guest reviews</h1>
-                <Review reviews={reviews}/>
+            <div className="reviews animated" data-aos="fade-top">
+                <h1>Guest reviews</h1>        
+                <OwlCarousel items="3" nav="null" loop="true" responsive={responsive} className="owl-carousel owl-theme">
+                    {renderedReviews}
+                </OwlCarousel>
             </div>
         </div>
     )

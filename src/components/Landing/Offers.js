@@ -1,5 +1,12 @@
 import React from 'react'
-import Offer from "./Offer"
+import AOS from 'aos';
+AOS.init({
+	useClassNames: true,
+	initClassName: false,
+	animatedClassName: 'animated',
+	easing: 'ease-in-out-cubic',
+	duration: 1600
+});
 
 const offers = [
     {
@@ -41,14 +48,46 @@ const offers = [
     }
 ]
 
-const Offers = () => {
-    return (
-        <div>
-            <div class="offers">
-               <Offer offers={offers}/>
-            </div>              
-        </div>
-    )
-}
+const Offer = () => {
+	const renderedOffers = offers.map((offer, index) => {
+		return (           
+			<div className={offer.offerClass}>
+				<div className={offer.offerOrder}>
+					<figure className={offer.figClass} />
+				</div>
+				<div className="description animated"  data-aos="fade-top">
+					<div>
+						<h2>{offer.decsTitle}</h2>
+						<h4>{offer.descLead}</h4>
+						<span />
+						<p>
+							{offer.firstP}
+							<a href={offer.link}>{offer.linkP}</a>
+							{offer.and}
+							<a href={offer.secondLink}>{offer.secondLinkP}</a>
+							{offer.secondP}
+						</p>
 
-export default Offers
+						<div className="button">
+							<a href={offer.btnLink}>
+								<button>See more</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		);
+	});
+
+	return (
+	<div>
+		<div>
+			<div className="offers">  
+				{renderedOffers}
+			</div>
+		</div>
+	</div>)
+};
+
+export default Offer;
