@@ -5,7 +5,7 @@ const Gallery = ({ gallery }) => {
     const renderedImages = gallery.map((image) => {
         return (
             <a className="image-link" href={image.img} data-lightbox="example-set">
-                <img className="image" src={image.img} alt="dubrovnik-roofs"/>
+                <img className="image" src={image.img} alt="" />
             </a>
         )
     })

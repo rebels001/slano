@@ -31,9 +31,6 @@ const Footer = () => {
 							<li>
 								<Link to="/elaphiti">- Elaphite islands cruise</Link>
 							</li>
-							<li>
-								<Link to="/ston">- Ston excursion</Link>
-							</li>
 						</ul>
 					</div>
 					<div className="social-media">

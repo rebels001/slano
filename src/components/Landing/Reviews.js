@@ -47,7 +47,7 @@ const responsive = {
 const Reviews = () => {
     const renderedReviews = reviews.map((review, index) => {
         return (
-            <div className="item">
+            <div className="item" key={index}>
                 <div className="rating">
                     <span>★★★★★</span>
                 </div>

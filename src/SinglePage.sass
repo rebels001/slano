@@ -7,16 +7,15 @@ body
         background-repeat: no-repeat
 
         &.elaphiti
-            background-image: url(images/priroda-hero.jpg)
-            background-position: 50% 70%
+            //background-image: url(images/priroda-hero.jpg)
+            background-image: url(images/Elafiti-nove/naslovna2.jpg)
+            background-size: cover
+            background-position: 70% 90% 
 
         &.dubrovnik
-            background-image: url(images/dubrovnik-hero.jpg)
-            background-position: 55% 50% 
-
-        &.ston 
-            background-image: url(images/Ston.jpg)
-            background-position: 50% 30%
+            background-image: url(images/Dubrovnik-nove/naslovna.png)
+            background-position: 65% 50% 
+            background-size: cover
 
     .big-map
         min-width: 99vw
@@ -28,8 +27,8 @@ body
             display: block
 
     .wrapper
-        width: 90%
-        margin: 0 auto
+        width: 100%
+        padding: 0 5%
 
         h1 
             font-family: Signika
@@ -46,9 +45,6 @@ body
 
             &.dubrovnik
                 width: 320px
-
-            &.ston
-                width: 300px
 
         .line::before
           content: "slano"
@@ -67,6 +63,12 @@ body
                 text-transform: uppercase
                 font-size: 25px
                 color: #313131
+
+            
+            .img-container
+                img
+                    width: 100%
+                    margin-top: 50px
 
             .description
                 width: 100%        
@@ -88,6 +90,19 @@ body
                 width: 100%
                 margin-top: 40px
                 line-height: 2
+                font-family: 'Oswald', sans-serif
+                color: #313131
+
+                p
+                    font-size: 22px
+
+                span
+                    font-size: 20px
+                    display: block
+
+                .contact
+                    i
+                        margin-right: 5px
 
     .map
         max-width: 100%
@@ -97,7 +112,7 @@ body
     .gallery
         display: flex
         flex-wrap: wrap
-        margin: 70px auto
+        margin: 0 auto
         justify-content: center
         width: 100%
 
@@ -124,11 +139,10 @@ body
 @media screen and ( min-width: 768px)   
     body      
         .hero-single
-            height: 450px
+            height: 500px
 
-            &.elaphiti
-                background-position: 50% 60%
-
+            &.dubrovnik
+                background-position: none
 
         .big-map
             display: block
@@ -139,6 +153,7 @@ body
 
         .wrapper
             width: 80%
+            margin: 0 auto
 
             h1 
                 font-size: 40px
@@ -149,33 +164,35 @@ body
 
                 &.dubrovnik 
                     width: 480px
-
-                &.ston 
-                    width: 420px
             
             .flex
                 flex-direction: row
                 margin-top: 70px
 
-                .description
-                    padding-left: 40px
-                    width: 50%        
-                    // padding-right: 80px 
+                .content-container
+                    width: 65%
 
-                    p:first-of-type
-                        padding-top: 30px     
+                    .description
+                        padding-left: 40px
+                        width: 90%        
+                        // padding-right: 80px 
 
-                .info
-                    width: 40%
-                    margin-top: 0px
-                    display: flex
-                    margin-left: 100px
+                        p:first-of-type
+                            padding-top: 30px     
 
-                    h2 
-                        margin-left: 60px   
+            .img-container
+                width: 35%
+
+                img
+                    width: 100%
+
+            .info
+                margin-top: 50px
+                margin-left: 40px
 
     .gallery 
         width: 80% !important
+        margin: 70px auto
     
         .image-link
             .image

@@ -1,5 +1,7 @@
 import React from 'react'
 import AOS from 'aos';
+import { Link } from 'react-router-dom';
+
 AOS.init({
 	useClassNames: true,
 	initClassName: false,
@@ -17,7 +19,7 @@ const offers = [
         firstP: "On the way to ",
         link: "http://www.tzdubrovnik.hr/lang/en/index.html",
         linkP: "Dubrovnik",
-        secondP: ", we sail through the waters of the Elaphite Islands and the Dubrovnik Reefs. The ride, which takes about one hour and fifteen minutes, ends with a trip to the historic old town, and it's famous port called Porat. When sailing into the city, we sail around the walls of the city, which offers an unforgettable panoramic experience.",
+        secondP: " we sail through the waters of the Elaphite Islands and the Dubrovnik Reefs. The ride, which takes about one hour and  forty-five minutes , ends with a trip to the historic old town, and it's famous port called Porat. When sailing into the city, we sail around the walls of the city, which offers an unforgettable panoramic experience.",
         btnLink: "/dubrovnik"
     },    
     {
@@ -32,26 +34,15 @@ const offers = [
         linkP: "Lopud",
         and: " and ",
         secondLinkP: "Šipan",
-        secondP: ", and visit their historic old settlements. During the voyage, you can see the unspoiled beauty of the coast, which incurred as a result of tectonic shifts during the creation of islands and the influence of the sea. The view of the bays, slopes, gorges, caves and rocks is what makes this excursion unique, as well as the view of the open sea.",
+        secondP: " and visit their historic old settlements. During the voyage, you can see the unspoiled beauty of the coast, which incurred as a result of tectonic shifts during the creation of islands and the influence of the sea. The view of the bays, slopes, gorges, caves and rocks is what makes this excursion unique, as well as the view of the open sea.",
         btnLink: "/elaphiti"
-    },
-    {
-        offerClass: "offer",
-        figClass: "ston-offer-img",
-        decsTitle: "Ston excursion",
-        descLead: "Historical Croatian town",
-        firstP: "The town of ",
-        link: "http://www.ston.hr/?l=eng",
-        linkP: "Ston",
-        secondP: " is known for its salt pans, whose origins date back to 14th century, and for its walls, which are the second-longest walls in the world. Ston is also the second city in Europe to be built with plumbing and sewerage. Ston is especially known for its gastronomy, because the Bay of Mali Ston is one of the largest mussel farming areas, and the Pelješac peninsula is one of the best vineyards in Croatia and this part of Europe.",
-        btnLink: "/ston"
     }
 ]
 
 const Offer = () => {
 	const renderedOffers = offers.map((offer, index) => {
 		return (           
-			<div className={offer.offerClass}>
+			<div className={offer.offerClass} key={index}>
 				<div className={offer.offerOrder}>
 					<figure className={offer.figClass} />
 				</div>
@@ -69,9 +60,9 @@ const Offer = () => {
 						</p>
 
 						<div className="button">
-							<a href={offer.btnLink}>
+							<Link to={offer.btnLink}>
 								<button>See more</button>
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>

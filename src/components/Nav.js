@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
+	const [navState, setNavState] = useState(false);
+
 	function closeNav()  {
-		document.getElementById("nav").checked = false
+		document.getElementById("nav").checked = false;
 	}
 	
 	return (
 		<div>
 			<nav>
+				<div className="logo logo-nav">
+					<Link to="/" onClick={closeNav}>
+						<h3>Slano boat Excursions</h3>
+					</Link>
+				</div>
 				<input type="checkbox" id={ closeNav ? "nav" : ""} className="hidden" />
-				<label htmlFor="nav" onClick={closeNav} className="nav-open"><i /><i /><i />
+				<label htmlFor="nav" className="nav-open"><i /><i /><i />
 				</label>
 				<div className="nav-container">
 					<div className="flex">
@@ -28,9 +35,6 @@ const Nav = () => {
 							</li>
 							<li>
 								<Link to="/elaphiti" onClick={closeNav}>Elaphite islands cruise</Link>
-							</li>
-							<li>
-								<Link to="/ston" onClick={closeNav}>Ston excursion</Link>
 							</li>
 							<li>
 								<a href="#contact" onClick={closeNav}>Contact</a>
