@@ -361,6 +361,19 @@ body
     .hero-1
       background-position: 81% -72px
 
+  @supports (-webkit-touch-callout: none) 
+    .hero
+      height: 50vh
+
+      .hero-1
+        background-attachment: unset
+        height: 60vh
+
+  @supports not (-webkit-touch-callout: none) 
+    .hero
+      .hero-1
+        background-attachment: fixed
+
 @media screen and ( min-width: 1024px)  
   body
     font-weight: 400

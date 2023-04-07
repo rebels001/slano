@@ -9,13 +9,10 @@ const Footer = () => {
 					<div className="contact">
 						<h3 id="contact">Contact us: </h3>
 						<h4>
+							<i className="fas fa-phone-alt" />
 							<i className="fab fa-whatsapp" />
 							<i className="fab fa-viber" />
 							+385 98 294 555
-						</h4>
-						<h4>
-							<i className="fas fa-phone-alt" />
-							+385 98 345 455
 						</h4>
 						<h4>
 							<i className="fas fa-mail-bulk" />

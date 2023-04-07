@@ -26,7 +26,7 @@ const offers = [
         offerClass: "offer second-offer",
         figClass: "elaphite-offer-img",
         offerOrder: "offer-order",
-        decsTitle: "ELAPHITE ISLANDS CRUISET",
+        decsTitle: "ELAPHITE ISLANDS CRUISE",
         descLead: "Unique islands of Croatia",
         firstP: "On this excursion, we will visit two of the most beautiful islands in the archipelago of the Elaphite Islands, the islands of ",
         link: "http://www.tzdubrovnik.hr/lang/en/get/okolica_dubrovnika/62179/otok_lopud.html",

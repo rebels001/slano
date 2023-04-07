@@ -53,10 +53,11 @@ const subpages = [
             infoFirstP: "in ",
             infoFirstPBold: "OLD TOWN",
             infoArrivalTimeP: "16:45",
-            price: "300kn",
+            price: "40€ (301.38kn)",
             heroClass: "hero-single dubrovnik",
             class: "dubrovnik",
-            plakat: plakatDubrovnik
+            plakat: plakatDubrovnik,
+            bookingWidget: <booking-widget widget-id="a147a76f-4c2b-4216-bee5-277d141b009e"></booking-widget>
         },
         map: {
             map: dubrovnikMap,
@@ -115,14 +116,15 @@ const subpages = [
             infoThirdP: "Stop for swimming around anchored boat in one of beautiful bays of island ",
             infoThirdPBold: "Jakljan",
             infoArrivalTimeP: "17:00",
-            price: "350kn",
+            price: "50€ (376.73kn)",
             infoLunch: " and",
             infoLunchBold: " LUNCH ",
             infoLunchSecond: "- our recognizable dalmatian seafood risotto",
             infoVegeLunch: "*vegetarian lunch option is available",
             heroClass: "hero-single elaphiti",
             class: "elaphiti",
-            plakat: epalhitiPlakat
+            plakat: epalhitiPlakat,
+            bookingWidget: <booking-widget widget-id="5dd86369-993b-428e-b4d8-56e8dcd68dca"></booking-widget>
         }, 
         map: {
             map: elaphiteMap,

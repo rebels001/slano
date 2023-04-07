@@ -2,7 +2,6 @@ import React from 'react';
 import Lightbox, { SRLWrapper } from 'simple-react-lightbox';
 
 const Map = ({ map }) => {
-	console.log(map, "map");
 	return (
 		<Lightbox>
 			<img src={map.map} className="map big-map" alt={map.alt} />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import AOS from 'aos'
 import Lightbox, { SRLWrapper } from "simple-react-lightbox"
 
@@ -11,7 +11,28 @@ AOS.init({
 });
 
 const Content = ({ content }) => {	
-	console.log(content, "content")
+	const [bookingWidget, setBookingWidget] = useState();
+
+	useEffect(() => {
+		const script = document.createElement('script');
+	
+		script.src = "https://widgets.regiondo.net/booking/v1/booking-widget.min.js";
+		script.async = true;
+	
+		document.body.appendChild(script);
+	
+		return () => {
+			document.body.removeChild(script);
+		}
+	}, []);
+
+	useEffect(() => {
+		setBookingWidget()
+		setTimeout(() => {
+			setBookingWidget(content.bookingWidget)
+		}, 200);
+	}, [content])
+
 	return (
 		<div>
 			<div className={content.heroClass} />
@@ -43,8 +64,8 @@ const Content = ({ content }) => {
 							<p>-	<b>ARRIVAL</b> in <b>Slano</b> around <b>{content.infoArrivalTimeP}</b></p>
 							<br/>
 							<p><b>PRICE: {content.price} per adult</b></p>
-							<span>*Children up to <b>6</b> years of age - <b>FREE</b></span>
-							<span>*Children from <b>6 to 12</b> years of age - <b>50% DISCOUNT</b></span>
+							<span>*Children up to <b>3</b> years of age - <b>FREE</b></span>
+							<span>*Children from <b>3 to 12</b> years of age - <b>50% DISCOUNT</b></span>
 							<br/>
 							<p><b>INCLUDED: </b></p>
 							<span><b>DRINKS</b> (homemade rakija, wine, water) 
@@ -58,13 +79,10 @@ const Content = ({ content }) => {
 							<p><b>RESERVATIONS & INFORMATIONS</b></p>
 							<div className="contact">
 								<span>
+									<i className="fas fa-phone-alt" />
 									<i className="fab fa-whatsapp" />
 									<i className="fab fa-viber" />
 									+385 98 294 555
-								</span>
-								<span>
-									<i className="fas fa-phone-alt" />
-									+385 98 345 455
 								</span>
 								<span>
 									<i className="fas fa-mail-bulk" />
@@ -78,6 +96,7 @@ const Content = ({ content }) => {
 					</div>
 
 					<div className='img-container'>
+						{bookingWidget}
 						<Lightbox>
 							<SRLWrapper>
 								<img src={content.plakat} alt=""/>
